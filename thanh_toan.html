@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+ 
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="./plugin/fontawesome/css/all.css">
+    <title>Thanh Toán (Pay)</title>
+    <link rel="stylesheet" href="css/catagory.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<style>
+
+
+</style>
+
+<body >
+    <div class="wraper">
+        <!-- mở đầu phần header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"> <img src="./images/logo.png" alt=""></a>
+                </div>
+                <!--logo-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a href="san_pham.html">SẢN PHẦM</a></li>
+                        <li><a href="xu_huong.html">XU HƯỚNG</a></li>
+                        <li><a href="thanh_toan.html">THANH TOÁN</a></li>
+                        <li><a href="lien_he.html">LIÊN HỆ</a></li>
+
+                      
+                        <li><a href=""><i class="fas fa-search"></i></a></li>
+                        <li><a href="thanh_toan.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--container-->
+        </header>
+        <!-- phần link danh mục -->
+        <section class="danh_muc mg_top">
+            <div class="container">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                    <li><a href=""> Trang Chủ</a></li>
+                    <li><a href="">> Thanh Toán</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- article -->
+        <div class="container main">
+            <article>
+                <h3>Giỏ Hàng</h3>
+                <br>
+                <section class="gio_hang">
+                    <div class="img_hang">
+                        <img src="./images/Layer 6.png" alt="">
+                    </div>
+                    <div class="name_hang">
+                        LE VERNIS Nail Colour Chanel
+                        <span style="cursor: pointer;" class="detail" onclick="xoa(this)" >Xóa</span>
+                        <a class="detail" href="">Để dành mua sau</a>
+                    </div>
+                    <div class="price_hang"><p><span class="price"> 250.000</span> VNĐ</p></div>
+                    <div class="length_hang">
+                        <span  onclick="myFunctionDown(0)" class="btn_product">-</span>
+                        <input  class="so_luong" type="number" placeholder="4" value=1>
+                        <span onclick="myFunctionUp(0)" class="btn_product">+</span>
+                    </div>
+                    <!--  -->
+                 
+                 
+                </section>
+                <section class="gio_hang">
+                    <div class="img_hang">
+                        <img src="./images/Layer 5.png" alt="">
+                    </div>
+                    <div class="name_hang">
+                        LE VERNIS Nail Colour Chanel
+                        
+                        <span style="cursor: pointer;" class="detail" onclick="xoa(this)" >Xóa</span>
+                        <a class="detail" href="">Để dành mua sau</a>
+                    </div>
+                    <div class="price_hang"><p> <span class="price"> 250.000</span> VNĐ</p></div>
+                    <div class="length_hang">
+                        <span onclick="myFunctionDown(1)" class="btn_product">-</span>
+                        <input class="so_luong" type="number"placeholder="4"value=0>
+                        <span onclick="myFunctionUp(1)" class="btn_product">+</span>
+                    </div>
+                    <!--  -->
+   
+                </section><!-- giỏ hàng-->
+
+            </article>
+
+
+
+            <!-- aside bar -->
+            <aside>
+                <div class="aside_widget">
+                    <h3>THANH TOÁN</h3>
+
+                    <div class="thanh-tien">
+                        <div class="thanh-toan">
+                            <span class="title-thanhtoan">Mã khuyến mãi</span>
+                            <span style="font-size: 12px; margin-top: 10px;" class="title-thanhtoan float-right">Hết thời
+                                hạn khuyến mãi</span>
+                        </div>
+                        <div class="thanh-toan">
+                            <span class="title-thanhtoan">Thành Tiền</span>
+                            <span class="giaTien float-right">250.000 VNĐ</span>
+                        </div>
+                        <button class="bt-thanhtoan" onclick="datHang()">Tiến hành đặt hàng</button>
+                    </div>
+
+                </div><!-- aside_widget-->
+
+
+                <!--danh mục-->
+                <div class="banner_qc">
+                    <a href="#"> <img src="./images/banner-02.png" alt=""></a>
+                </div><!-- banner quảng cáo-->
+
+            </aside>
+        </div>
+        <!--container-->
+
+
+        <!--phần chân trang footer -->
+        <footer>
+            <div class="container">
+                <div class="colum1">
+                    <div class="logo">
+                        <img src="./images/logo copy.png" alt="">
+                    </div>
+                    <p>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản
+                        trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản
+                        chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn</p>
+                    <br>
+                    <p>Copyright By Trungtvpd04212</p>
+                </div>
+                <div class="colum2">
+                    <h3>DANH MỤC</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum3">
+                    <h3>BÁN CHẠY</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum4">
+
+
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=378305369565109&autoLogAppEvents=1"
+                        nonce="41L5kJo1"></script>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="225" data-width=""
+                        data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--wraper-->
+   
+<script src="js/js.js"></script>
+    <script >
+        var soLuong=document.querySelectorAll('.so_luong');
+        var giaTien=document.querySelector('.giaTien');
+        
+      
+        function   myFunctionDown(x){
+            giam(x);
+         
+        }
+        function myFunctionUp(x){
+            tang(x);
+           
+        }
+   
+        var temp=0;
+            function giam(a){
+                var Tong=0;
+                sum=soLuong[a].value;
+                sum=sum-1;
+                // in raa màng hình
+                soLuong[a].value=sum; 
+                tong=sum*250000;
+              //   cập nhập giá tiền      
+               capnhat(temp);
+             
+            }
+        
+            function tang(b){
+                var Tong=0;
+                sum=soLuong[b].value;
+                sum=Number(sum)+1;
+                // in ra màng hình số lượng
+                soLuong[b].value=sum;
+                tong=sum*250000;
+        //   cập nhập giá tiền
+            capnhat(temp);
+
+
+            }
+          function capnhat(temp){
+              var sum=0;
+              for(var i=0;i<soLuong.length;i++)
+              {
+                //   console.log(soLuong[i].value*250000)
+                  sum=sum+soLuong[i].value*250000;
+              }
+              giaTien.innerText=`${sum} VNĐ`;
+          }
+      
+//  nút đặt hàng thông báo đặt hàng thành công
+            function datHang(){
+                
+                alert ("Đặt Hàng Thành Công")
+            }
+ //  nút xóa sản phẩm không muốn có
+
+            function xoa(x){
+                console.log(x.parentElement.parentElement.remove('gio_hang'));
+                
+            }
+
+  
+    </script>
+</body>
+
+</html>

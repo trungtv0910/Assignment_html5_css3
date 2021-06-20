@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/xu_huong.css" .css">
+    <link rel="stylesheet" href="./plugin/fontawesome/css/all.css">
+ 
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="css/catagory.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<style>
+    .detail_sp {
+        display: flex;
+    }
+    .detail_img{
+        width: 350px;
+        margin-right: 15px;
+        height: 412px;
+    }
+    .detail_nd{
+        margin-left: 15px;
+        width: 432px;
+    }
+    .detail_nd h3{font-size: 28px;}
+    .code_sp,.detail_ndct{
+        padding: 15px 0px;
+        color:#c0c0c0;
+    }
+    .detail_ndct{padding-top: 35px;
+    padding-bottom: 50px;}
+    .detail_soLuong input{
+        padding: 5px 10px;
+        width: 50px;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+    .add_cart{
+        background-color: #029900;
+        color: white;
+    }
+    .buy_now{
+        background-color: #e60f1e;
+        color: white;
+    }
+    /* csss cho thông tin sản phẩm */
+    .info_sanPham {margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    }
+    .info_sanPham p{padding: 10px 20px;
+    display:inline;
+ 
+    color: white;
+    background-color: grey;}
+
+
+</style>
+
+<body>
+    <div class="wraper">
+        <!-- mở đầu phần header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"> <img src="./images/logo.png" alt=""></a>
+                </div>
+                <!--logo-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a href="san_pham.html">SẢN PHẦM</a></li>
+                        <li><a href="xu_huong.html">XU HƯỚNG</a></li>
+                        <li><a href="thanh_toan.html">THANH TOÁN</a></li>
+                        <li><a href="lien_he.html">LIÊN HỆ</a></li>
+
+                      
+                        <li><a href=""><i class="fas fa-search"></i></a></li>
+                        <li><a href="thanh_toan.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--container-->
+        </header>
+        <!-- phần link danh mục -->
+        <section class="danh_muc mg_top">
+            <div class="container">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                    <li><a href=""> Trang Chủ</a></li>
+                    <li><a href="">> Chi Tiết Sản Phẩm</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- article -->
+        <div class="container main">
+            <article>
+                <!-- làm thông tin giỏ hàng -->
+                <section class="detail_sp">
+                    <div class="detail_img">
+                        <img src="./images/product-04-390x520.png" alt="">
+                    </div>
+                    <!--img-->
+                    <div class="detail_nd">
+                        <h3>LE VERNIS Nail Colour Chanel</h3>
+                        <p class="code_sp">mã sản phẩm :AH000123</p>
+                        <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                        <p class="detail_ndct">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eum culpa vero unde quae ullam,
+                            ut incidunt suscipit laborum id sapiente  Commodi omnis fugiat illo dicta inventore sapiente
+                            sint rem. Facilis porro tempore, repellat.</p>
+                        <span class="detail_soLuong">Số lượng: <input type="text"placeholder="1"></span>
+                        <br>
+                        <button class="btn_product add_cart">THÊM GIỎ HÀNG</button>
+                        <button class="btn_product  buy_now">Mua Ngay</button>
+                    </div><!-- nội dung-->
+                </section>
+                <br>
+                <hr>
+            <!--thông tin sản phẩm, chi tiết về sản phẩm -->
+                <section class="info_sanPham">
+                    <p class="ttsp">Thông tin sản phẩm</p>
+                    <p class="ttsp">Bình luận</p>
+                 
+                </section>
+                <div class="bai_viet">
+                    <h2>LE VERNIS Nail Colour Chanel</h2>
+                    <p>heo thông báo ngày hôm nay (28/1), đối tác chiến lược của Công ty cổ phần Tập đoàn Masan là
+                        Singha Asia Holding Pte Ltd (“Singha”) đã hoàn thành đợt góp vốn đầu tiên trị giá 650 triệu USD
+                        vào công ty này.</p>
+                    <img src="./images/xu_huong/Layer 24.png" alt="">
+
+                    <!-- thêm video vào website -->
+                    <section class="video">
+                        <video id="video" src="./images/video.mp4" controls width="830"></video>
+                        <div class="dieu_huong">
+                            <button type="submit" class="btn_product" onclick="play_pause()">play</button>
+                            <button  type="submit" onclick="play_pause()" class="btn_product">pause</button>
+                            <button  type="submit"  onclick="makeSmall()" class="btn_product">300px</button>
+                            <button type="submit"  onclick="makeNomal()" class="btn_product">500px</button>
+                            <button type="submit"  onclick="makeBig()" class="btn_product">830px</button>
+                            
+                        </div>
+                    </section> <!--video-->
+
+                    <p>Ký kết hợp tác chiến lược từ ngày 25/12/2015 với giao dịch trị giá 1,1 tỷ USD, cho tới hôm nay,
+                        Singha đã chuyển khoản vốn đầu tư đợt đầu với tổng 650 triệu đô la Mỹ, bao gồm 50 triệu đô la Mỹ
+                        để sở hữu 33,3% cổ phần Masan Brewery và 600 triệu đô la Mỹ để sở hữu 14,3% cổ phần Masan
+                        Consumer Holdings.</p>
+                    <p>Khoản vốn đầu tư 600 triệu đôla Mỹ chuyển vào Masan Consumer Holdings sẽ được sử dụng để mua thêm
+                        cổ phần của Masan Consumer, mảng kinh doanh thực phẩm và đồ uống không cồn của Masan.</p>
+                    <p>Như vậy, tỷ lệ sở hữu trực tiếp của Masan Consumer Holdings trong công ty Masan Consumer sẽ tăng
+                        từ 77,8% lên 96,7%.</p>
+
+                    <p>Tập đoàn Masan là một trong những công ty hàng đầu của Việt Nam, công ty con Masan Consumer
+                        Holdings tập trung vào các mặt hàng tiêu dùng với nhiều cơ hội tăng trưởng cao như là thực phẩm,
+                        đồ uống, với những thương hiệu tiêu biểu như Chinsu, Nam Ngư, Omachi, Vinacafe, Wake-up…</p>
+                    <p>Còn Singha Asia là một công ty thành viên quan trọng của Tập đoàn Boon Rawd Brewery - hãng bia
+                        đầu tiên và lớn nhất của Thái Lan. Hiện nay công ty đang sản xuất các sản phẩm với nhiều thương
+                        hiệu khác nhau như Singha, Leo, B-ing, Purra, Sanvo… thông qua 50 công ty thành viên</p>
+                    <p>Đợt góp vốn đầu tiên này là sự xác thực mạnh mẽ cho hợp tác chiến lược giữa Masan và Singha, tiếp
+                        cận gần hơn mục tiêu mở rộng thị trường kinh doanh thực phẩm và đồ uống của hai công ty lớn này,
+                        đặt trọng tâm là các nước “Inland ASEAN” (Việt Nam, Thái Lan, Myanmar, Campuchia, Lào) với 250
+                        triệu người tiêu dùng.</p>
+
+                    <p>Đợt góp vốn 450 triệu đôla Mỹ còn lại sẽ gia tăng tỷ lệ sở hữu cổ phần công ty Masan Consumer
+                        Holdings của Singha lên 25% sau khi thực hiện đầy đủ các quy định của pháp luật.</p>
+                </div>
+                <!-- bài viết -->
+
+            </article>
+
+
+
+
+            <!-- aside bar -->
+            <aside>
+                <div class="aside_widget">
+                    <h3>DANH MỤC</h3>
+                    <ul>
+                        <li><a href="san_pham.html">SẢN PHẨM</a></li>
+                        <li class="danh_muc_active"><a href=""> CẢM NHẬN SẢN PHẨM</a></li>
+                        <li><a href="xu_huong.html">XU HƯỚNG</a></li>
+                        <li><a href="thanh_toan.html">THANH TOÁN</a></li>
+                    </ul>
+                </div>
+                <!--danh mục-->
+                <div class="banner_qc">
+                    <a href="#"> <img src="./images/banner-02.png" alt=""></a>
+                </div><!-- banner quảng cáo-->
+
+
+                <div class="aside_widget">
+                    <h3>SẢN PHẨM BÁN CHẠY</h3>
+                    <ul class="ban_chay">
+                        <!-- sản phẩm 1 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 2 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 3 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 4 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 5 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 6 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--Sản phẩm bán chạy-->
+
+            </aside>
+        </div>
+        <!--container-->
+
+
+
+        <!--phần chân trang footer -->
+        <footer>
+            <div class="container">
+                <div class="colum1">
+                    <div class="logo">
+                        <img src="./images/logo copy.png" alt="">
+                    </div>
+                    <p>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản
+                        trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản
+                        chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn</p>
+                    <br>
+                    <p>Copyright By Trungtvpd04212</p>
+                </div>
+                <div class="colum2">
+                    <h3>DANH MỤC</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum3">
+                    <h3>BÁN CHẠY</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum4">
+
+
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=378305369565109&autoLogAppEvents=1"
+                        nonce="41L5kJo1"></script>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="225" data-width=""
+                        data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <!--wraper-->
+
+
+    <script src="js/js.js"></script>
+</body>
+
+</html>

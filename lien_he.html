@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="./plugin/fontawesome/css/all.css">
+ 
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="css/catagory.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body onload="geolocation()">
+    <div class="wraper">
+        <!-- mở đầu phần header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"> <img src="./images/logo.png" alt=""></a>
+                </div>
+                <!--logo-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a href="san_pham.html">SẢN PHẦM</a></li>
+                        <li><a href="xu_huong.html">XU HƯỚNG</a></li>
+                        <li><a href="thanh_toan.html">THANH TOÁN</a></li>
+                        <li><a href="lien_he.html">LIÊN HỆ</a></li>
+
+                      
+                        <li><a href=""><i class="fas fa-search"></i></a></li>
+                        <li><a href="thanh_toan.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--container-->
+        </header>
+        <!-- phần link danh mục -->
+        <section class="danh_muc mg_top">
+            <div class="container">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                    <li><a href=""> Trang Chủ</a></li>
+                    <li><a href="">> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- article -->
+        <div class="container main">
+            <article>
+                <!-- form liên hệ -->
+                <div class="form">
+                    <form action="" onsubmit="return kiem_tra()">
+                        <h1 style="color: #283943 ;font-size: 37px;"> Liên hệ</h1>
+
+                        <div class="form-group">
+                            <label for="" class="fullname">Họ Và Tên</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="VD: Trần Văn Trung"
+                                onkeyup="kiem_tra()" required>
+                            <span class="form-massage"></span>
+                        </div>
+                        <!--form-group-->
+
+                        <div class="form-group">
+                            <label for="" class="enail">Email</label>
+                            <input type="email" name="email" id="email" placeholder="VD:Trungtv@mail.com"
+                                onkeyup="kiem_tra()" required>
+                            <span class="form-massage"></span>
+                        </div>
+                        <!--form-group-->
+
+                        <div class="form-group">
+                            <label for="" class="sex">Giới Tính</label>
+                            <div class="boc">
+                                <input type="radio" name="sex" id="nam" onclick="kiem_tra()"><label for="nam">
+                                    Nam</label>
+                                <input type="radio" name="sex" id="nu" onclick="kiem_tra()"><label for="nu"> Nữ</label>
+                            </div>
+                            <!--bọc-->
+                            <span class="form-massage"></span>
+                        </div>
+                        <!--form-group-->
+
+                        <div class="form-group">
+                            <label for="" class="hobby">Sở Thích</label>
+                            <div class="boc">
+                                <input type="checkbox" name="hobby" id="hobby" onclick="kiem_tra()"> Vest Nam
+                                <input type="checkbox" name="hobby" id="hobby" onclick="kiem_tra()"> Vest Nữ
+                                <input type="checkbox" name="hobby" id="hobby" onclick="kiem_tra()"> Âu Phục
+                                <input type="checkbox" name="hobby" id="hobby" onclick="kiem_tra()"> Giày Tây
+                                <input type="checkbox" name="hobby" id="hobby" onclick="hien_thi()"> Khác
+
+                                <div class="hobby-defferent" style="display:none">
+
+                                    <textarea name="" id="" cols="58" rows="3" placeholder="sở thích khác"></textarea>
+                                </div>
+
+                            </div>
+                            <!--bọc-->
+                            <span class="form-massage"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="">Quốc Gia</label>
+
+                            <select name="quocTich" id="quocTich" name="TenDanhSach">
+                                <option value="">Chọn Quốc Gia</option>
+                                <option value="1">Lào</option>
+                                <option value="2">Việt nam</option>
+
+                                <option value="3">Thái Lan</option>
+                                <option value="4">Singapo</option>
+                                <option value="5">Campuchia</option>
+                                <option value="6">Angola</option>
+                                <option value="7">Japan</option>
+                                <option value="8">Koria</option>
+                                <option value="9">Hong Kong</option>
+                                <option value="10">TaiWan</option>
+                                <option value="11">Russia</option>
+                                <option value="12">Dubai</option>
+                            </select>
+
+                            <span class="form-massage"></span>
+                        </div>
+                        <!--form-group-->
+
+
+                        <div class="form-group">
+                            <label for="" class="ghi-chu">Ghi Chú</label>
+                            <textarea name="note" id="note" cols="20" rows="4" style="border: 1px solid #d6d6d6;"
+                                placeholder="ghi chú không quá 200 ký tự"></textarea>
+                            <span class="form-massage"></span>
+                        </div>
+                        <!--form-group-->
+
+                        <button class="bt-submit">Gửi Thông Tin</button>
+                        <span class="dk_thanhcong" style="display: none;"> Đăng Ký Thành Công</span>
+
+                    </form>
+                </div>
+
+                <!-- html google maps hiển thị các ghop gần ban -->
+                <div class="geolocation">
+                    <h3> Các Shop Gần Bạn</h3>
+                    <p>vị trí của bạn là: Kinh độ <span id="kinh_do"></span>, vĩ độ <span id="vi_do"></span></p>
+                </div><!-- geo location-->
+
+            </article>
+
+
+
+
+            <!-- aside bar -->
+            <aside>
+                <div class="aside_widget">
+                    <h3>DANH MỤC</h3>
+                
+                        <ul>
+                            <li><a href="san_pham.html">SẢN PHẨM</a></li>
+                            <li class="danh_muc_active"><a href=""> CẢM NHẬN SẢN PHẨM</a></li>
+                            <li><a href="xu_huong.html">XU HƯỚNG</a></li>
+                            <li><a href="thanh_toan.html">THANH TOÁN</a></li>
+                        </ul>
+                  
+                </div>
+                <!--danh mục-->
+                <div class="banner_qc">
+                    <a href="#"> <img src="./images/banner-02.png" alt=""></a>
+                </div><!-- banner quảng cáo-->
+
+
+                <div class="aside_widget">
+                    <h3>SẢN PHẨM BÁN CHẠY</h3>
+                    <ul class="ban_chay">
+                        <!-- sản phẩm 1 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 2 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 3 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 4 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 5 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 9 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+                        <!-- sản phẩm 6 -->
+                        <li>
+                            <a href="" class="anh">
+                                <img src="./images/Layer 7 copy.png" alt="">
+                            </a>
+                            <div class="thong_tin">
+                                <p class="title_product">Mascara làm dày và dài mi MAYBELLINE Falsies 9.2ml</p>
+                                <p class="price_product">255.000đ <span class="price_del">300.000đ</span></p>
+                                <a href="#" class="detail">Chi tiết ></a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--Sản phẩm bán chạy-->
+
+            </aside>
+        </div>
+        <!--container-->
+
+
+
+        <!--phần chân trang footer -->
+        <footer>
+            <div class="container">
+                <div class="colum1">
+                    <div class="logo">
+                        <img src="./images/logo copy.png" alt="">
+                    </div>
+                    <p>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản
+                        trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản
+                        chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn</p>
+                    <br>
+                    <p>Copyright By Trungtvpd04212</p>
+                </div>
+                <div class="colum2">
+                    <h3>DANH MỤC</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum3">
+                    <h3>BÁN CHẠY</h3>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                    <a href="">Thời trang thu đông</a>
+                </div>
+                <div class="colum4">
+
+
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=378305369565109&autoLogAppEvents=1"
+                        nonce="41L5kJo1"></script>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="225" data-width=""
+                        data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--wraper-->
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+
+        function geolocation() {
+            kinh_do=document.getElementById('kinh_do');
+            vi_do=document.getElementById('vi_do');
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function showPosition(p) {
+                    //    alert(`Bạn đang ở kinh độ:${p.coords.longitude} </br> vĩ độ:${p.coords.latitude}`)
+                    kinh_do.innerText=p.coords.longitude;
+                    vi_do.innerText=p.coords.latitude;
+                });
+            }
+            else {
+                alert("trình duyệt của bạn không hổ trợ Geolocation")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
